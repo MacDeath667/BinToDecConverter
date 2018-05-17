@@ -1,7 +1,0 @@
-E:\C#\BinToDecConverter\BinToDecConverter\bin\Debug\BinToDecConverter.exe.config
-E:\C#\BinToDecConverter\BinToDecConverter\bin\Debug\BinToDecConverter.exe
-E:\C#\BinToDecConverter\BinToDecConverter\bin\Debug\BinToDecConverter.pdb
-E:\C#\BinToDecConverter\BinToDecConverter\obj\Debug\BinToDecConverter.csprojResolveAssemblyReference.cache
-E:\C#\BinToDecConverter\BinToDecConverter\obj\Debug\BinToDecConverter.csproj.CoreCompileInputs.cache
-E:\C#\BinToDecConverter\BinToDecConverter\obj\Debug\BinToDecConverter.exe
-E:\C#\BinToDecConverter\BinToDecConverter\obj\Debug\BinToDecConverter.pdb
