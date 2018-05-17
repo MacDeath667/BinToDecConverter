@@ -11,42 +11,41 @@ namespace BinToDecConverter
         static void Main(string[] args)
         {
             int bin;
-            string binString;
-
-
+            Console.Write("Enter binary number: ");
             bin = Int32.Parse(Console.ReadLine()); // или так: Int32.TryParse(Console.ReadLine(), out bin);
-            binString = Convert.ToString(bin);
-            //int binary = bin;
             int length = GetCountsOfDigits(bin);
-            //int length = binString.Length; // ради узнавания длины числа
+            int binStory = bin;
             int[] temp = new int[length];
             int[] tempInt = new int[length];
 
             for (int i = 0; i <= length - 1; i++)
             {
-                temp[i] = bin / (Convert.ToInt32(Math.Pow(10, length - i - 1)));
-                bin = bin - temp[i] * (Convert.ToInt32(Math.Pow(10, length - i - 1)));
+                temp[length - 1 - i] = bin % 10;
+                bin = bin/10;
+                if (temp[i] > 1)
+                Console.WriteLine("You can enter only Binary number! ");
             }
+
+            int sum = 0;
 
             for (int i = 0; i <= length - 1; i++)
             {
-                tempInt[i] = Convert.ToInt32(temp[i]);
+                sum = sum + temp[i];
             }
+            
+            
 
+            Console.Write("Digits in your number are: ");
             for (int i = 0; i <= length - 1; i++)
             {
                 Console.Write(temp[i] + " ");
             }
-            int dec = (BinToDecConverter.converter.BinToDec(length, tempInt));
-            Console.WriteLine(" Binary : " + bin);
-            Console.WriteLine( " Decimal: " + dec);
+            Console.WriteLine();
+            int dec = (BinToDecConverter.converter.BinToDec(length, temp));
+            Console.WriteLine(" Binary : " + binStory);
+            Console.WriteLine(" Decimal: " + dec);
             Console.ReadKey();
-
-
-
         }
-        
-
 
         public static int GetCountsOfDigits(int number)
         {
